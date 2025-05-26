@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel Heart Jar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="initial-overlay">
+    <div class="overlay-content">
+        <h2>Click to Begin</h2>
+    </div>
+</div>
+
+<div class="music-control">
+    <button id="musicBtn" class="pixel-btn">♪ Music ON</button>
+</div>
+
+<div class="pixel-bg"></div>
+
+<h1 class="pixel-title">HAPPY 20TH BIRTHDAY IAN!</h1>
+
+<div class="jar">
+    <div class="jar-lid"></div>
+    <div class="jar-heading">So Much Love to Collect — All for You! 💖</div>
+    <div class="pixel-bow"></div>
+    <div id="hearts" class="hearts-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+</div>
+
+<audio id="bgMusic" loop autoplay>
+    <source src="audio/birthday.mp4" type="audio/mpeg">
+</audio>
+
+<audio id="startSound">
+    <source src="audio/start.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="heartClickSound">
+    <source src="audio/boop.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="closeSound">
+    <source src="audio/x.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="rechargeSound">
+    <source src="audio/recharge.mp3" type="audio/mpeg">
+</audio>
+
+<div class="video-popup">
+    <div class="popup-content pixel-box">
+        <span class="close-btn pixel-btn">X</span>
+        <h2 class="video-heading"></h2>
+        <video id="popupVideo" controls class="pixel-video"></video>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
