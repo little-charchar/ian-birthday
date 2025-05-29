@@ -23,7 +23,7 @@ const hearts = [
     { video: 'videos/edison.mov', color: '#ff9ff3', heading: 'Edison', profile: 'images/edison_pic.png'},
     { video: 'videos/maggie.mov', color: '#ff9ff3', heading: 'Maggie', profile: 'images/maggie_pic.png'},
     { video: 'videos/daniel.mov', color: '#ff9ff3', heading: 'Daniel', profile: 'images/daniel_pic.png'},
-    { video: 'videos/yassine.MOV', color: '#ff9ff3', heading: 'Yassine', profile: 'images/yassine_pic.png'},
+    { video: 'videos/yassine.mov', color: '#ff9ff3', heading: 'Yassine', profile: 'images/yassine_pic.png'},
     { video: 'videos/zhiling.mov', color: '#ff9ff3', heading: 'Zhi Ling', profile: 'images/zhiling_pic.png'},
     { video: 'videos/feng.mov', color: '#ff9ff3', heading: 'Feng', profile: 'images/feng_pic.png'}
 ];
