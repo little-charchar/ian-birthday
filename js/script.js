@@ -1,6 +1,6 @@
 // Config
 const hearts = [
-    { video: 'videos/charlene.mov', color: '#ff0000', heading: 'Charlene', profile: '' },
+    { video: 'https://youtu.be/i69Yn_7GuWY', color: '#ff0000', heading: 'Charlene', profile: '' },
     { video: 'videos/dorian.mov', color: '#ff9ff3', heading: 'Dorian', profile: 'images/dorian_pic.png' },
     { video: 'videos/rick.mov', color: '#ff9ff3', heading: 'Rick', profile: 'images/rick_pic.png' },
     { video: 'videos/alex.mp4', color: '#ff9ff3', heading: 'Alex', profile: 'images/alex_pic.png' },
