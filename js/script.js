@@ -25,7 +25,9 @@ const hearts = [
     { video: 'videos/daniel.mov', color: '#ff9ff3', heading: 'Daniel', profile: 'images/daniel_pic.png'},
     { video: 'videos/yassine.mov', color: '#ff9ff3', heading: 'Yassine', profile: 'images/yassine_pic.png'},
     { video: 'videos/zhiling.mov', color: '#ff9ff3', heading: 'Zhi Ling', profile: 'images/zhiling_pic.png'},
-    { video: 'videos/feng.mov', color: '#ff9ff3', heading: 'Feng', profile: 'images/feng_pic.png'}
+    { video: 'videos/feng.mov', color: '#ff9ff3', heading: 'Feng', profile: 'images/feng_pic.png'},
+    { video: 'videos/nima.mov', color: '#ff9ff3', heading: 'Nima', profile: 'images/nima_pic.png'},
+    { video: 'videos/rajan.mov', color: '#ff9ff3', heading: 'Rajan', profile: 'images/rajan_pic.png'}
 ];
 
 const BOUNCE = 0.3;
@@ -184,10 +186,36 @@ function createHeart(heartData, isRevival = false) {
                 videoHeading.textContent = this.dataset.heading;
             }
             videoPopup.style.display = 'flex';
+
+            const isYouTube = popupVideo.src.includes('youtube.com/embed');
             
             popupVideo.volume = 1.0;
             popupVideo.play();
-            
+
+            if (isYouTube) {
+                let iframe = videoPopup.querySelector('iframe');
+                if (!iframe) {
+                    iframe = document.createElement('iframe');
+                    iframe.width = popupVideo.width || 560;
+                    iframe.height = popupVideo.height || 315;
+                    iframe.frameBorder = '0';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    videoPopup.appendChild(iframe);
+                }
+                iframe.src = popupVideo.src + '?autoplay=1&mute=0';
+                iframe.style.display = 'block';
+                popupVideo.parentNode.replaceChild(iframe, popupVideo);
+
+            } else {
+                const iframe = videoPopup.querySelector('iframe');
+                if (iframe) {
+                    iframe.remove();
+                }
+                popupVideo.style.display = 'block';
+                popupVideo.play();
+            }
+
             bgMusic.volume = 0.05;
             
             popupVideo.onended = () => {
@@ -310,6 +338,12 @@ closeBtn.addEventListener('click', () => {
     
     videoPopup.style.display = 'none';
     popupVideo.pause();
+
+    const iframe = videoPopup.querySelector('iframe');
+    if (iframe) {
+        iframe.src = '';
+        iframe.remove();
+    }
     
     bgMusic.volume = 0.3;
     
